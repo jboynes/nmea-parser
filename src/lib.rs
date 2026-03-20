@@ -184,6 +184,9 @@ pub enum ParsedMessage {
     /// HDT
     Hdt(gnss::HdtData),
 
+    /// HDG
+    Hdg(gnss::HdgData),
+
     /// MWV
     Mwv(gnss::MwvData),
 }
@@ -609,6 +612,7 @@ impl NmeaParser {
             "$MTW" => gnss::mtw::handle(sentence.as_str()),
             "$VHW" => gnss::vhw::handle(sentence.as_str()),
             "$HDT" => gnss::hdt::handle(sentence.as_str()),
+            "$HDG" => gnss::hdg::handle(sentence.as_str()),
             "$MWV" => gnss::mwv::handle(sentence.as_str()),
             _ => Err(ParseError::UnsupportedSentenceType(format!(
                 "Unsupported sentence type: {}",

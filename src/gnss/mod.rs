@@ -35,6 +35,7 @@ pub(crate) mod mtw;
 pub(crate) mod vhw;
 pub(crate) mod hdt;
 pub(crate) mod mwv;
+pub(crate) mod hdg;
 
 use super::*;
 pub use gga::{GgaData, GgaQualityIndicator};
@@ -56,6 +57,7 @@ pub use dbs::DbsData;
 pub use mtw::MtwData;
 pub use vhw::VhwData;
 pub use hdt::HdtData;
+pub use hdg::HdgData;
 pub use mwv::MwvData;
 
 // -------------------------------------------------------------------------------------------------
